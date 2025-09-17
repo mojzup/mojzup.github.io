@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact -Tututu Orchestra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <div><strong>MySite</strong></div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section>
+    <h1>Contact Us</h1>
+    <p>Have questions or feedback? Fill out the form below to get in touch.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <p style="margin-top: 20px; font-size: 0.9em;">* You can use a free service like <a href="https://formspree.io/" target="_blank">Formspree</a> to handle submissions.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
