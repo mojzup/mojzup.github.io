@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery - Tututu Orchestra</title>
 
-    <!-- Google Font - Art Deco Style -->
+  <!-- Google Font - Art Deco Style -->
   <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
-  
+
   <style>
-    body {
+    * {
       margin: 0;
-      background: #111;
-      font-family: 'Unica One', sans-serif;
-      color: #fff;
-      padding: 40px;
+      padding: 0;
+      box-sizing: border-box;
     }
-  header {
+
+    body, html {
+      scroll-behavior: smooth;
+      font-family: 'Unica One', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
       position: absolute;
       top: 0;
       left: 0;
@@ -25,10 +31,35 @@
       background: transparent;
       padding: 20px 0;
     }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fcd34d;
+    }
+
     h1 {
       text-align: center;
+      margin-top: 100px;
       margin-bottom: 40px;
       color: #fcd34d;
+      font-size: 2.5rem;
     }
 
     .gallery {
@@ -36,6 +67,7 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-auto-rows: 200px;
       gap: 15px;
+      padding: 0 40px 60px;
     }
 
     .gallery-item {
@@ -75,28 +107,38 @@
       grid-row: span 2;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 700px) {
       .gallery {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         grid-auto-rows: 150px;
+        padding: 0 20px 40px;
       }
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    a {
+      color: #fcd34d;
     }
   </style>
 </head>
 <body>
+
   <!-- Transparent Header with Centered Menu -->
   <header>
-<nav>
-  <div><strong>Tututu Orchestra</strong></div>
-  <div>
-    <a href="/index.html">Home</a>
-    <a href="/about/">About</a>
-    <a href="/gallery/">Gallery</a>
-    <a href="/contact/">Contact</a>
-  </div>
-</nav>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about/">About</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
+
   <h1>Gallery</h1>
 
   <div class="gallery">
@@ -126,6 +168,10 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tututu Orchestra. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
-
