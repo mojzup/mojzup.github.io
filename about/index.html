@@ -19,6 +19,7 @@
       font-family: 'Roboto', sans-serif;
       background-color: #111;
       color: #fff;
+      height: 100%;
     }
 
     header {
@@ -50,7 +51,7 @@
     }
 
     nav a:hover {
-      color: #00f2e5;
+      color: #008080; /* Teal */
     }
 
     .hero {
@@ -60,6 +61,9 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
     }
 
     .hero::after {
@@ -68,16 +72,31 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 40%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #00f2e5 100%);
+      height: 60%;
+      background: linear-gradient(to top, rgba(0, 128, 128, 0.85), rgba(0, 128, 128, 0)); /* teal gradient */
       z-index: 1;
+      pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 20px;
-      text-align: center;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00b3b3; /* lighter teal */
+      text-shadow: 0 0 10px rgba(0, 179, 179, 0.8);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #d0f0f0;
+      line-height: 1.6;
+      text-shadow: 0 0 8px rgba(0, 128, 128, 0.7);
     }
 
     section {
@@ -85,19 +104,7 @@
       margin: 40px auto 60px;
       padding: 0 20px;
       text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00f2e5;
-    }
-
-    p {
-      font-size: 1.1rem;
       color: #ccc;
-      line-height: 1.8;
-      margin-bottom: 20px;
     }
 
     footer {
@@ -108,7 +115,7 @@
     }
 
     a {
-      color: #00f2e5;
+      color: #008080;
     }
   </style>
 </head>
@@ -126,10 +133,19 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <div class="hero-content"></div>
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p>
+        Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.
+      </p>
+      <p>
+        The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
+      </p>
+    </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- Optional: you can remove this extra section if you don't want repeated content -->
+  <!--
   <section>
     <h1>About Us</h1>
     <p>
@@ -139,6 +155,7 @@
       The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
     </p>
   </section>
+  -->
 
   <!-- Footer -->
   <footer>
