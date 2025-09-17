@@ -1,31 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Tututu Orchestra</title>
+
+  <!-- Google Font - Art Deco Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      scroll-behavior: smooth;
+      font-family: 'Unica One', sans-serif;
+      background-color: #111;
+      color: #fff;
     }
 
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
-      position: sticky;
+      position: absolute;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 1000;
+      background: transparent;
+      padding: 20px 0;
     }
 
     nav {
       max-width: 1000px;
       margin: auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 0 20px;
     }
@@ -33,13 +44,34 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 15px;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fcd34d;
     }
 
     section {
       max-width: 1000px;
-      margin: 60px auto;
+      margin: 100px auto 60px;
       padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fcd34d;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -48,38 +80,38 @@
       text-align: center;
       padding: 20px 0;
     }
+
+    a {
+      color: #fcd34d;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header with Navigation -->
+  <!-- Transparent Header with Centered Menu -->
   <header>
-<nav>
-  <div><strong>Tututu Orchestra</strong></div>
-  <div>
-    <a href="/index.html">Home</a>
-    <a href="/about/">About</a>
-    <a href="/gallery/">Gallery</a>
-    <a href="/contact/">Contact</a>
-  </div>
-</nav>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about/">About</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
 
   <!-- Main Content -->
   <section>
     <h1>About Us</h1>
-    <p>TututuOrchestra is a dynamic collective of musicians based in the Netherlands, which draws its inspiration 
-from traditions such as jazz, impressionism and folk music of the world. The specialty of the orchestra is 
-the use of compositional fragments as a driving force for guided improvisation. With the desire to 
-combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the 
-conductress comes to the front, at times full of theatrical expressionism.
-</p>
-    <p></p>
+    <p>
+      Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.
+    </p>
+    <p>
+      The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
+    </p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 MySite. All rights reserved.</p>
+    <p>&copy; 2025 Tututu Orchestra. All rights reserved.</p>
   </footer>
 
 </body>
