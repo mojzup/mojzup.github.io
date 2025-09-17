@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tututu Orchestra</title>
+  
+  <!-- Google Font - Art Deco Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -13,6 +17,9 @@
 
     body, html {
       scroll-behavior: smooth;
+      font-family: 'Unica One', sans-serif;
+      background-color: #111;
+      color: #fff;
     }
 
     header {
@@ -22,7 +29,6 @@
       width: 100%;
       z-index: 1000;
       background: transparent;
-      color: #fff;
       padding: 20px 0;
     }
 
@@ -30,7 +36,7 @@
       max-width: 1000px;
       margin: auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 0 20px;
     }
@@ -38,7 +44,14 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 15px;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fcd34d; /* Warm gold highlight */
     }
 
     .hero {
@@ -47,33 +60,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
       position: relative;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      padding: 30px 40px;
       border-radius: 10px;
+      color: #fcd34d; /* Gold */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    section.color-block {
-      height: 100vh;
-      width: 100%;
+    section {
+      padding: 80px 20px;
+      text-align: center;
     }
 
-    .color1 {
-      background-color: #f44336; /* Red */
+    .upcoming-show {
+      background-color: #1a1a1a;
     }
 
-    .color2 {
-      background-color: #4caf50; /* Green */
+    .upcoming-show h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fcd34d;
     }
 
-    .color3 {
-      background-color: #2196f3; /* Blue */
+    .upcoming-show p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ccc;
     }
 
     footer {
@@ -86,31 +105,29 @@
 </head>
 <body>
 
-  <!-- Transparent Header -->
+  <!-- Transparent Header with Centered Menu -->
   <header>
     <nav>
-      <div><strong>MySite</strong></div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="about/">About</a>
-        <a href="contact/">Contact</a>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="about/">About</a>
+      <a href="contact/">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <div class="hero">
-    <h1>Welcome to My Website</h1>
+    <h1>Welcome to Tututu Orchestra</h1>
   </div>
 
-  <!-- Color Sections -->
-  <section class="color-block color1"></section>
-  <section class="color-block color2"></section>
-  <section class="color-block color3"></section>
+  <!-- Upcoming Show Section -->
+  <section class="upcoming-show">
+    <h2>Upcoming Show</h2>
+    <p>Join us for a magical night at the Kino Šiška, Ljubljana, Slovenia on October 4, 2025. Featuring a full orchestra and special guest performers, this is an event you won’t want to miss.</p>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 MySite. All rights reserved.</p>
+    <p>&copy; 2025 Tututu Orchestra. All rights reserved.</p>
   </footer>
 
 </body>
