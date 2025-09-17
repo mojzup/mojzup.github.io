@@ -1,33 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tututu Orchestra</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f5f5f5;
-      color: #333;
+      line-height: 1.6;
     }
-    h1 {
-      color: #007acc;
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    img {
-      max-width: 300px;
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .hero {
+      background: url('images/tututu-grand-theatre.webp') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is my first GitHub Pages site 🎉</p>
 
-  <h2>Here’s an image:</h2>
-  <img src="images/tututu-grand-theatre.webp" alt="My photo">
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <div><strong>MySite</strong></div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <p>Pretty cool, right?</p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Tututu Orchestra</h1>
+  </div>
+
+  <!-- Section 1 -->
+  <section>
+    <h2>Section One</h2>
+    <p>This is the first content section of your website.</p>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <h2>Section Two</h2>
+    <p>This is the second section, maybe with more details.</p>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <h2>Section Three</h2>
+    <p>Third section, possibly showcasing features or a gallery.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
