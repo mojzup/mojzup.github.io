@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tututu Orchestra</title>
   <link rel="icon" type="image/png" href="/images/sun.png">
-
-  <!-- Google Font - -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -18,7 +16,7 @@
 
     body, html {
       scroll-behavior: smooth;
-     font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #111;
       color: #fff;
     }
@@ -37,22 +35,30 @@
       max-width: 1000px;
       margin: auto;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 0 20px;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      gap: 15px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
       font-size: 1.1rem;
       letter-spacing: 1px;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #fcd34d; /* Warm gold highlight */
+      color: #fcd34d;
+    }
+
+    .logo {
+      height: 40px;
     }
 
     .hero {
@@ -70,7 +76,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       padding: 30px 40px;
       border-radius: 10px;
-      color: #fcd34d; /* Gold */
+      color: #fcd34d;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
@@ -81,6 +87,24 @@
 
     .upcoming-show {
       background-color: #1a1a1a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      text-align: left;
+    }
+
+    .upcoming-show img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      flex: 1 1 400px;
+    }
+
+    .upcoming-show-text {
+      max-width: 500px;
+      flex: 1 1 400px;
     }
 
     .upcoming-show h2 {
@@ -91,9 +115,28 @@
 
     .upcoming-show p {
       font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
       color: #ccc;
+    }
+
+    .video-section {
+      background-color: #111;
+      padding: 60px 20px;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    .video-section p {
+      color: #ccc;
+      font-size: 1rem;
+      text-align: center;
     }
 
     footer {
@@ -102,17 +145,41 @@
       text-align: center;
       padding: 20px 0;
     }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .upcoming-show {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .upcoming-show-text {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Transparent Header with Centered Menu -->
+  <!-- Navigation with logo in center -->
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about/">About</a>
-      <a href="gallery/">Gallery</a>
-      <a href="contact/">Contact</a>
+      <div class="nav-left">
+        <a href="about/">About</a>
+        <a href="gallery/">Gallery</a>
+      </div>
+
+      <a href="index.html">
+        <img src="images/logo.png" alt="Tututu Logo" class="logo">
+      </a>
+
+      <div class="nav-right">
+        <a href="contact/">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -121,10 +188,25 @@
     <h1>Tututu Orchestra</h1>
   </div>
 
-  <!-- Upcoming Show Section -->
+  <!-- Upcoming Show Section (Image Left, Text Right) -->
   <section class="upcoming-show">
-    <h2>Upcoming Show</h2>
-    <p>Join us for a magical night at the Kino Šiška, Ljubljana, Slovenia on October 4, 2025. Featuring a full orchestra and special guest performers, this is an event you won’t want to miss.</p>
+    <img src="images/show-promo.jpg" alt="Upcoming Show Poster">
+    <div class="upcoming-show-text">
+      <h2>Upcoming Show</h2>
+      <p>
+        Join us for a magical night at the Kino Šiška, Ljubljana, Slovenia on October 4, 2025.
+        Featuring a full orchestra and special guest performers, this is an event you won’t want to miss.
+      </p>
+    </div>
+  </section>
+
+  <!-- YouTube Video Section -->
+  <section class="video-section">
+    <iframe 
+      src="https://www.youtube.com/embed/AUOqdfrR8mM?start=0" 
+      allowfullscreen 
+      title="Tututu Orchestra Live Concert"></iframe>
+    <p>This was from our concert some other time.</p>
   </section>
 
   <!-- Footer -->
