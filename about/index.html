@@ -38,7 +38,7 @@
       left: 0;
       width: 100%;
       z-index: 10000;
-      background: transparent;
+      background: transparent; /* fully transparent */
       padding: 20px 0;
     }
 
@@ -69,10 +69,10 @@
       padding-top: 70px; /* roughly header height */
     }
 
-    /* --- Hero Section with image only --- */
+    /* --- Hero Section with larger height --- */
     .hero {
       position: relative;
-      height: 60vh;
+      height: 80vh; /* increased from 60vh to 80vh */
       background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
     }
 
@@ -136,7 +136,7 @@
 
     @media (max-width: 768px) {
       .hero {
-        height: 50vh;
+        height: 60vh; /* smaller height on mobile */
       }
 
       .about-section {
