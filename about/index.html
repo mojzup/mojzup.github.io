@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Tututu Orchestra</title>
   <link rel="icon" type="image/png" href="/images/sun.png">
+  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
@@ -22,6 +24,7 @@
       min-height: 100vh;
     }
 
+    /* --- Header/Nav matching your gallery page style --- */
     header {
       position: absolute;
       top: 0;
@@ -51,7 +54,7 @@
     }
 
     nav a:hover {
-      color: #008080; /* Teal */
+      color: #fcd34d; /* your gold accent */
     }
 
     /* --- Hero Section --- */
@@ -65,8 +68,9 @@
       color: #fff;
       font-size: 3rem;
       font-weight: bold;
-      text-shadow: 0 0 15px rgba(0, 128, 128, 0.8);
+      text-shadow: 0 0 15px rgba(252, 211, 77, 0.9); /* gold glow */
       z-index: 0;
+      margin-top: 80px; /* to clear fixed header a bit */
     }
 
     .hero::after {
@@ -76,7 +80,7 @@
       left: 0;
       width: 100%;
       height: 30%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0), #008080 90%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0), #fcd34d 90%);
       pointer-events: none;
       z-index: 1;
     }
@@ -85,31 +89,36 @@
       position: relative;
       z-index: 2;
       margin: 0;
+      color: #fcd34d;
     }
 
     /* --- About Text Section --- */
     .about-text {
-      background-color: #008080; /* solid teal matching hero gradient bottom */
-      color: #d0f0f0;
+      background-color: #fcd34d; /* gold matching hero gradient bottom */
+      color: #111;
       padding: 60px 20px;
       max-width: 700px;
       margin: -40px auto 60px; /* pull up for smooth blend */
       border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       line-height: 1.6;
       text-align: left;
       position: relative;
       z-index: 10;
+      font-weight: 500;
+      font-size: 1.1rem;
     }
 
     .about-text h1 {
-      color: #a0dede;
+      color: #111;
       margin-bottom: 30px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
     }
 
     .about-text p {
       margin-bottom: 20px;
-      font-size: 1.1rem;
     }
 
     footer {
@@ -120,25 +129,27 @@
     }
 
     a {
-      color: #008080;
+      color: #fcd34d;
     }
 
     @media (max-width: 768px) {
       .hero {
         font-size: 2rem;
+        margin-top: 60px;
       }
 
       .about-text {
         max-width: 90%;
         padding: 40px 15px;
         margin: -20px auto 40px;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Transparent Header -->
+  <!-- Transparent Header with Centered Menu -->
   <header>
     <nav>
       <a href="/index.html">Home</a>
