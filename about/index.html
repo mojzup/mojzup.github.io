@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Tututu Orchestra</title>
-  <link rel="icon" type="image/png" href="/images/sun.png">
+  <link rel="icon" type="image/png" href="/images/sun.png" />
   
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -24,7 +24,7 @@
       min-height: 100vh;
     }
 
-    /* --- Header/Nav matching your gallery page style --- */
+    /* --- Header/Nav --- */
     header {
       position: absolute;
       top: 0;
@@ -54,7 +54,7 @@
     }
 
     nav a:hover {
-      color: #fcd34d; /* your gold accent */
+      color: #fcd34d; /* gold accent */
     }
 
     /* --- Hero Section --- */
@@ -63,24 +63,26 @@
       height: 60vh;
       background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       color: #fff;
       font-size: 3rem;
       font-weight: bold;
       text-shadow: 0 0 15px rgba(252, 211, 77, 0.9); /* gold glow */
       z-index: 0;
-      margin-top: 80px; /* to clear fixed header a bit */
+      margin-top: 80px; /* clear fixed header */
+      padding-bottom: 40px;
     }
 
+    /* Gradient fade at bottom of hero into teal */
     .hero::after {
       content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 30%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0), #fcd34d 90%);
+      height: 100px;
+      background: linear-gradient(to bottom, rgba(17,17,17,0), #019297 90%);
       pointer-events: none;
       z-index: 1;
     }
@@ -94,11 +96,11 @@
 
     /* --- About Text Section --- */
     .about-text {
-      background-color: #fcd34d; /* gold matching hero gradient bottom */
-      color: #111;
-      padding: 60px 20px;
-      max-width: 700px;
-      margin: -40px auto 60px; /* pull up for smooth blend */
+      background-color: #019297; /* teal */
+      color: #fff;
+      padding: 60px 40px;
+      max-width: 900px; /* wider container, about half a laptop screen */
+      margin: -80px auto 80px; /* negative margin to overlap hero fade */
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       line-height: 1.6;
@@ -106,13 +108,13 @@
       position: relative;
       z-index: 10;
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     .about-text h1 {
-      color: #111;
+      color: #fcd34d;
       margin-bottom: 30px;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       text-align: center;
     }
@@ -132,17 +134,29 @@
       color: #fcd34d;
     }
 
+    @media (max-width: 1024px) {
+      .about-text {
+        max-width: 80%;
+        padding: 50px 30px;
+        margin: -60px auto 60px;
+        font-size: 1.1rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .hero {
         font-size: 2rem;
         margin-top: 60px;
+        height: 50vh;
+        padding-bottom: 20px;
       }
 
       .about-text {
         max-width: 90%;
-        padding: 40px 15px;
-        margin: -20px auto 40px;
+        padding: 40px 20px;
+        margin: -40px auto 40px;
         font-size: 1rem;
+        border-radius: 8px;
       }
     }
   </style>
