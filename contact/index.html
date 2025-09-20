@@ -22,7 +22,7 @@
       min-height: 100vh;
     }
 
-    /* Header/Nav — same style as gallery */
+    /* Header/Nav — updated for centered nav with consistent style */
     header {
       position: absolute;
       top: 0;
@@ -35,13 +35,13 @@
 
     nav {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 20px;
       gap: 30px;
       flex-wrap: wrap;
+      padding: 0 20px;
     }
 
     nav a {
@@ -56,7 +56,7 @@
     }
 
     nav a:hover {
-      color: #fcd34d;
+      color: #fcd34d; /* gold */
     }
 
     /* Logo in center nav */
@@ -96,14 +96,16 @@
       margin-bottom: 20px;
     }
 
+    /* Contact links horizontal */
     .contact-links {
       margin-top: 40px;
-      font-size: 1.1rem;
-      line-height: 2;
-      text-align: left;
-      max-width: 400px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
     .contact-links a {
@@ -114,6 +116,7 @@
       gap: 6px;
       font-weight: 500;
       transition: color 0.3s;
+      white-space: nowrap;
     }
 
     .contact-links a:hover {
@@ -148,6 +151,11 @@
       h1 {
         font-size: 2rem;
       }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -174,36 +182,31 @@
     <p>For bookings, press inquiries, or just to say hi — get in touch!</p>
 
     <div class="contact-links">
-      <p>
-        <a href="mailto:tututu.orchestra@gmail.com" aria-label="Email">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-          tututu.orchestra@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="https://instagram.com/tututu.orchestra" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
-          </svg>
-          @tututu.orchestra
-        </a>
-      </p>
-      <p>
-        <a href="https://facebook.com/tututuorchestra" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.5a3.5 3.5 0 013.75-3.87 15.64 15.64 0 012.25.2v2.5H14a1.5 1.5 0 00-1.75 1.62v1.87h3l-.5 2.88h-2.5v6.99A10 10 0 0022 12z"/>
-          </svg>
-          tututuorchestra
-        </a>
-      </p>
-      <p>
-        <a href="/files/EPK eng oct 2024.pdf" target="_blank" rel="noopener" aria-label="Download EPK">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-          </svg>
-          Download our EPK
-        </a>
-      </p>
+      <a href="mailto:tututu.orchestra@gmail.com" aria-label="Email">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+        tututu.orchestra@gmail.com
+      </a>
+
+      <a href="https://instagram.com/tututu.orchestra" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
+        </svg>
+        @tututu.orchestra
+      </a>
+
+      <a href="https://facebook.com/tututuorchestra" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.5a3.5 3.5 0 013.75-3.87 15.64 15.64 0 012.25.2v2.5H14a1.5 1.5 0 00-1.75 1.62v1.87h3l-.5 2.88h-2.5v6.99A10 10 0 0022 12z"/>
+        </svg>
+        tututuorchestra
+      </a>
+
+      <a href="/files/EPK eng oct 2024.pdf" target="_blank" rel="noopener" aria-label="Download EPK">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        Download our EPK
+      </a>
     </div>
   </section>
 
