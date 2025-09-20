@@ -24,15 +24,16 @@
       min-height: 100vh;
     }
 
-    /* --- Header/Nav --- */
+    /* --- Transparent Header --- */
     header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000;
+      z-index: 10000;
       background: transparent;
       padding: 20px 0;
+      transition: background-color 0.3s ease;
     }
 
     nav {
@@ -57,7 +58,7 @@
       color: #fcd34d; /* gold accent */
     }
 
-    /* --- Hero Section --- */
+    /* Padding top for body content so nav doesn't overlap */
     .hero {
       position: relative;
       height: 60vh;
@@ -69,9 +70,9 @@
       font-size: 3rem;
       font-weight: bold;
       text-shadow: 0 0 15px rgba(252, 211, 77, 0.9); /* gold glow */
-      z-index: 0;
-      margin-top: 80px; /* clear fixed header */
       padding-bottom: 40px;
+      padding-top: 80px; /* same height as header for spacing */
+      z-index: 0;
     }
 
     /* Gradient fade at bottom of hero into teal */
@@ -100,7 +101,7 @@
       color: #fff;
       padding: 60px 40px;
       max-width: 900px; /* wider container, about half a laptop screen */
-      margin: -80px auto 80px; /* negative margin to overlap hero fade */
+      margin: -80px auto 80px; /* negative margin to blend with hero gradient */
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       line-height: 1.6;
@@ -144,11 +145,14 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        padding: 15px 0;
+      }
       .hero {
         font-size: 2rem;
-        margin-top: 60px;
         height: 50vh;
         padding-bottom: 20px;
+        padding-top: 60px;
       }
 
       .about-text {
