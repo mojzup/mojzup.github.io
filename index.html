@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tututu Orchestra</title>
-  <link rel="icon" type="image/png" href="/images/sun.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/images/sun.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -51,7 +51,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 25px;
+      gap: 40px;
       flex-wrap: wrap;
     }
 
@@ -66,16 +66,6 @@
 
     nav a:hover {
       color: var(--gold);
-    }
-
-    .logo {
-      height: 60px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
     }
 
     .hero {
@@ -102,7 +92,11 @@
     }
 
     .upcoming-show {
-      background-color: #1a1a1a;
+      background-color: #2e2200; /* subtle dark gold/brown */
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(216, 162, 0, 0.5);
+      padding: 40px 20px;
+      margin: 0 20px;
     }
 
     .upcoming-show-content {
@@ -112,6 +106,8 @@
       align-items: center;
       gap: 40px;
       text-align: left;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .upcoming-show img {
@@ -120,21 +116,43 @@
       height: auto;
       border-radius: 10px;
       flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(216, 162, 0, 0.6);
     }
 
     .upcoming-show-text {
-      max-width: 500px;
+      max-width: 550px;
+      color: var(--text-light);
     }
 
     .upcoming-show h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: var(--orange);
+      color: var(--gold);
     }
 
     .upcoming-show p {
       font-size: 1.2rem;
-      color: var(--text-muted);
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .more-info-link {
+      display: inline-block;
+      font-size: 1.1rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid var(--gold);
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .more-info-link:hover {
+      background-color: var(--gold);
+      color: var(--bg);
+      text-decoration: none;
     }
 
     .video-section iframe {
@@ -183,18 +201,13 @@
 </head>
 <body>
 
-  <!-- Header with centered logo and menu around it -->
+  <!-- Header -->
   <header>
     <div class="container">
       <nav>
+        <a href="index.html">Home</a>
         <a href="about/">About</a>
         <a href="gallery/">Gallery</a>
-
-        <a href="index.html" class="logo-link">
-          <img src="images/logo.webp" alt="Tututu Logo" class="logo">
-        </a>
-
-        <a href="shows/">Shows</a>
         <a href="contact/">Contact</a>
       </nav>
     </div>
@@ -207,16 +220,15 @@
 
   <!-- Upcoming Show Section -->
   <section class="upcoming-show">
-    <div class="container">
-      <div class="upcoming-show-content">
-        <img src="images/tututu-siska-ig.webp" alt="Tututu Orchestra Kino Šiška">
-        <div class="upcoming-show-text">
-          <h2>Upcoming Show</h2>
-          <p>
-            Join us for a magical night at the Kino Šiška, Ljubljana, Slovenia on October 4, 2025.
-            Featuring a full orchestra and special guest performers, this is an event you won’t want to miss.
-          </p>
-        </div>
+    <div class="upcoming-show-content container">
+      <img src="images/tututu-siska-ig.webp" alt="Tututu Orchestra Kino Šiška" />
+      <div class="upcoming-show-text">
+        <h2>Upcoming Show</h2>
+        <p>
+          Join us for a magical night at the Kino Šiška, Ljubljana, Slovenia on October 4, 2025.
+          Featuring a full orchestra and special guest performers, this is an event you won’t want to miss.
+        </p>
+        <a href="https://www.kinosiska.si/dogodek/tututu-orchestra/" target="_blank" rel="noopener" class="more-info-link">More Info</a>
       </div>
     </div>
   </section>
