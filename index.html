@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
   <style>
+    @font-face {
+      font-family: 'Herald Square';
+      src: url('/fonts/herald-square.squarenf.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     :root {
       --gold: #d8a200;
       --orange: #ce5426;
@@ -37,50 +44,49 @@
       padding: 0 20px;
     }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: transparent;
-  padding: 20px 0;
-}
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+      padding: 20px 0;
+    }
 
-nav {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 0 20px;
-}
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
 
-nav a {
-  color: var(--text-light); /* using main page text color */
-  text-decoration: none;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  transition: color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+    nav a {
+      color: var(--text-light); /* using main page text color */
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-nav a:hover {
-  color: var(--gold); /* main page gold color */
-}
+    nav a:hover {
+      color: var(--gold); /* main page gold color */
+    }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
 
     /* HERO */
     .hero {
@@ -93,6 +99,7 @@ nav a:hover {
     }
 
     .hero h1 {
+      font-family: 'Herald Square', serif;
       font-size: 4rem;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 30px 40px;
@@ -229,22 +236,21 @@ nav a:hover {
     <h1>Tututu Orchestra</h1>
   </div>
 
-<!-- Kino Siska Poster Section -->
-<section class="upcoming-show">
-  <div class="upcoming-show-content">
-    <div class="poster-left">
-      <img src="/images/tututu-siska-ig.webp" alt="Kino Siska Poster" />
+  <!-- Kino Siska Poster Section -->
+  <section class="upcoming-show">
+    <div class="upcoming-show-content">
+      <div class="poster-left">
+        <img src="/images/tututu-siska-ig.webp" alt="Kino Siska Poster" />
+      </div>
+      <div class="poster-right upcoming-show-text">
+        <h2>Tututu Orchestra Returns To Slovenia</h2>
+        <p>
+          Join us for a speacial night at Kino Šiška on 4th October 2025 where we will be joined by guests Pre-gibni pokret and attendees of the workshop.
+        </p>
+        <a href="https://www.kinosiska.si/dogodek/tututu-orchestra/" class="more-info-link">More Info</a>
+      </div>
     </div>
-    <div class="poster-right upcoming-show-text">
-      <h2>Tututu Orchestra Returns To Slovenia</h2>
-      <p>
-        Join us for a speacial night at Kino Šiška on 4th October 2025 where we will be joined by guests Pre-gibni pokret and attendees of the workshop.
-      </p>
-      <a href="https://www.kinosiska.si/dogodek/tututu-orchestra/" class="more-info-link">More Info</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- YouTube Video Section -->
   <section class="video-section">
