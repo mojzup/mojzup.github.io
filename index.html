@@ -8,6 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --gold: #d8a200;
+      --orange: #ce5426;
+      --teal: #019297;
+      --bg: #111;
+      --text-light: #eee;
+      --text-muted: #ccc;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -17,8 +26,8 @@
     body, html {
       scroll-behavior: smooth;
       font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: var(--bg);
+      color: var(--text-light);
     }
 
     header {
@@ -33,32 +42,41 @@
 
     nav {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
-    }
-
-    .nav-left, .nav-right {
-      display: flex;
-      gap: 15px;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #fff;
+      color: var(--text-light);
       text-decoration: none;
       font-size: 1.1rem;
       letter-spacing: 1px;
+      padding: 8px 12px;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #fcd34d;
+      color: var(--gold);
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo {
-      height: 40px;
+      height: 70px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     .hero {
@@ -76,7 +94,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       padding: 30px 40px;
       border-radius: 10px;
-      color: #fcd34d;
+      color: var(--gold);
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
@@ -110,16 +128,16 @@
     .upcoming-show h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #fcd34d;
+      color: var(--orange);
     }
 
     .upcoming-show p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: var(--text-muted);
     }
 
     .video-section {
-      background-color: #111;
+      background-color: var(--bg);
       padding: 60px 20px;
     }
 
@@ -134,7 +152,7 @@
     }
 
     .video-section p {
-      color: #ccc;
+      color: var(--text-muted);
       font-size: 1rem;
       text-align: center;
     }
@@ -149,7 +167,7 @@
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
       }
 
       .upcoming-show {
@@ -165,21 +183,18 @@
 </head>
 <body>
 
-  <!-- Navigation with logo in center -->
+  <!-- Header with centered logo and surrounding menu -->
   <header>
     <nav>
-      <div class="nav-left">
-        <a href="about/">About</a>
-        <a href="gallery/">Gallery</a>
-      </div>
+      <a href="about/">About</a>
+      <a href="gallery/">Gallery</a>
 
-      <a href="index.html">
+      <a href="index.html" class="logo-link">
         <img src="images/logo.webp" alt="Tututu Logo" class="logo">
       </a>
 
-      <div class="nav-right">
-        <a href="contact/">Contact</a>
-      </div>
+      <a href="shows/">Shows</a>
+      <a href="contact/">Contact</a>
     </nav>
   </header>
 
@@ -190,7 +205,7 @@
 
   <!-- Upcoming Show Section (Image Left, Text Right) -->
   <section class="upcoming-show">
-    <img src="images/show-promo.jpg" alt="Upcoming Show Poster">
+    <img src="images/tututu-siska-ig.webp" alt="Tututu Orchestra Kino Šiška">
     <div class="upcoming-show-text">
       <h2>Upcoming Show</h2>
       <p>
