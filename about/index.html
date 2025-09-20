@@ -8,20 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --gold: #d8a200;
+      --orange: #ce5426;
+      --teal: #019297;
+      --bg: #111;
+      --text-light: #eee;
+      --text-muted: #ccc;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       scroll-behavior: smooth;
       font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: var(--bg);
+      color: var(--text-light);
       height: 100%;
     }
 
+    a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    /* --- Header --- */
     header {
       position: absolute;
       top: 0;
@@ -33,88 +48,86 @@
     }
 
     nav {
-      max-width: 1000px;
-      margin: auto;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 0 20px;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #fff;
+      color: var(--text-light);
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      padding: 6px 10px;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #008080; /* Teal */
+      color: var(--gold);
     }
 
-.hero {
-  position: relative;
-  height: 100vh; /* full viewport height */
-  background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
-  display: flex;
-  align-items: flex-end; /* keep text near bottom */
-  justify-content: center;
-  padding: 60px 20px 80px; /* add some bottom padding for breathing room */
-  text-align: center;
-  color: #fff;
-}
+    .logo {
+      height: 60px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%; /* gradient covers bottom 40% */
-  background: linear-gradient(to top, rgba(0, 128, 128, 0.85), rgba(0, 128, 128, 0)); /* teal gradient */
-  z-index: 1;
-  pointer-events: none;
-}
+    .logo:hover {
+      transform: scale(1.05);
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin-bottom: 40px;
-}
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+    }
 
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      background: linear-gradient(to top, rgba(1, 146, 151, 0.9), rgba(1, 146, 151, 0));
+      z-index: 1;
+    }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 700px;
-      margin-bottom: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 30px;
     }
 
     .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #00b3b3; /* lighter teal */
-      text-shadow: 0 0 10px rgba(0, 179, 179, 0.8);
+      font-size: 3.2rem;
+      margin-bottom: 30px;
+      color: var(--teal);
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
     }
 
     .hero-content p {
       font-size: 1.2rem;
-      color: #d0f0f0;
-      line-height: 1.6;
-      text-shadow: 0 0 8px rgba(0, 128, 128, 0.7);
+      line-height: 1.8;
+      color: #f2f2f2;
+      text-align: justify;
+      margin-bottom: 1.5em;
+      letter-spacing: 0.3px;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     }
 
-    section {
-      max-width: 1000px;
-      margin: 40px auto 60px;
-      padding: 0 20px;
-      text-align: center;
-      color: #ccc;
-    }
-
+    /* --- Footer --- */
     footer {
       background: #222;
       color: #fff;
@@ -122,24 +135,40 @@
       padding: 20px 0;
     }
 
-    a {
-      color: #008080;
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Transparent Header -->
+  <!-- Header with logo in center and nav around -->
   <header>
     <nav>
-      <a href="/index.html">Home</a>
       <a href="/about/">About</a>
       <a href="/gallery/">Gallery</a>
+
+      <a href="/index.html" class="logo-link">
+        <img src="/images/logo.webp" alt="Tututu Logo" class="logo">
+      </a>
+
+      <a href="/shows/">Shows</a>
       <a href="/contact/">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with About Content -->
   <div class="hero">
     <div class="hero-content">
       <h1>About Us</h1>
@@ -149,20 +178,5 @@
       <p>
         The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
       </p>
-      <p>Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids. </p>
-     <p>At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.</p>
-   <p>The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them.
-
-The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.</p>
-    </div>
-  </div>
-
-
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Tututu Orchestra. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+      <p>
+        Under the di
