@@ -24,7 +24,7 @@
       min-height: 100vh;
     }
 
-    /* --- Transparent Header --- */
+    /* --- Transparent fixed header --- */
     header {
       position: fixed;
       top: 0;
@@ -33,7 +33,6 @@
       z-index: 10000;
       background: transparent;
       padding: 20px 0;
-      transition: background-color 0.3s ease;
     }
 
     nav {
@@ -58,24 +57,19 @@
       color: #fcd34d; /* gold accent */
     }
 
-    /* Padding top for body content so nav doesn't overlap */
+    /* Add top padding so content doesn't hide behind fixed header */
+    main {
+      padding-top: 70px; /* roughly header height */
+    }
+
+    /* --- Hero Section with image and gradient fade --- */
     .hero {
       position: relative;
       height: 60vh;
       background: url('../images/tututu-siska-banner.webp') center/cover no-repeat;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      color: #fff;
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 0 0 15px rgba(252, 211, 77, 0.9); /* gold glow */
-      padding-bottom: 40px;
-      padding-top: 80px; /* same height as header for spacing */
-      z-index: 0;
     }
 
-    /* Gradient fade at bottom of hero into teal */
+    /* Gradient fade at bottom of hero */
     .hero::after {
       content: "";
       position: absolute;
@@ -85,42 +79,31 @@
       height: 100px;
       background: linear-gradient(to bottom, rgba(17,17,17,0), #019297 90%);
       pointer-events: none;
-      z-index: 1;
     }
 
-    .hero h1 {
-      position: relative;
-      z-index: 2;
-      margin: 0;
-      color: #fcd34d;
-    }
-
-    /* --- About Text Section --- */
-    .about-text {
-      background-color: #019297; /* teal */
-      color: #fff;
+    /* --- About Section --- */
+    .about-section {
+      background-color: #019297; /* solid teal */
+      color: #004d4d; /* darker teal for heading */
       padding: 60px 40px;
-      max-width: 900px; /* wider container, about half a laptop screen */
-      margin: -80px auto 80px; /* negative margin to blend with hero gradient */
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      line-height: 1.6;
+      width: 100%;
+      box-sizing: border-box;
       text-align: left;
-      position: relative;
-      z-index: 10;
+    }
+
+    .about-section h1 {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #004d4d;
+    }
+
+    .about-section p {
+      max-width: 900px;
+      color: #e0f2f2; /* lighter text for readability */
+      line-height: 1.6;
       font-weight: 500;
       font-size: 1.15rem;
-    }
-
-    .about-text h1 {
-      color: #fcd34d;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .about-text p {
       margin-bottom: 20px;
     }
 
@@ -136,31 +119,31 @@
     }
 
     @media (max-width: 1024px) {
-      .about-text {
-        max-width: 80%;
-        padding: 50px 30px;
-        margin: -60px auto 60px;
+      .about-section {
+        padding: 50px 20px;
+      }
+
+      .about-section p {
+        max-width: 100%;
         font-size: 1.1rem;
       }
     }
 
     @media (max-width: 768px) {
-      header {
-        padding: 15px 0;
-      }
       .hero {
-        font-size: 2rem;
         height: 50vh;
-        padding-bottom: 20px;
-        padding-top: 60px;
       }
 
-      .about-text {
-        max-width: 90%;
-        padding: 40px 20px;
-        margin: -40px auto 40px;
+      .about-section {
+        padding: 40px 15px;
+      }
+
+      .about-section h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-section p {
         font-size: 1rem;
-        border-radius: 8px;
       }
     }
   </style>
@@ -177,30 +160,30 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>About Us</h1>
-  </div>
+  <main>
+    <!-- Hero Image Section -->
+    <section class="hero"></section>
 
-  <!-- About Text Section -->
-  <section class="about-text">
-    <h1>About Us</h1>
-    <p>
-      Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.
-    </p>
-    <p>
-      The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
-    </p>
-    <p>
-      Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids.
-    </p>
-    <p>
-      At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.
-    </p>
-    <p>
-      The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them. The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.
-    </p>
-  </section>
+    <!-- Solid Color About Section -->
+    <section class="about-section">
+      <h1>About Us</h1>
+      <p>
+        Tututu Orchestra is a dynamic collective of musicians based in the Netherlands, drawing inspiration from traditions such as jazz, impressionism, and folk music from around the world.
+      </p>
+      <p>
+        The specialty of the orchestra is the use of compositional fragments as a driving force for guided improvisation. With a desire to combine orchestral sound with the fluidity of a small combo, the interplay between the orchestra and the conductress takes center stage — at times full of theatrical expressionism.
+      </p>
+      <p>
+        Under the direction of conductress Mojca Zupančič, the orchestra performs a wide range of compositions full of enchanting melodies, groovy rhythms, and playfully arranged passages. Sometimes, however, the orchestra runs wild, tearing apart the bonds of the structure where the conductress can only navigate these sonic rapids.
+      </p>
+      <p>
+        At the invitation of the conductress, the audience can also join the sound-making during the performance. The emerging harmony of instruments and voices blurs the lines between the audience and the performers, creating a sense of community.
+      </p>
+      <p>
+        The heart of the ensemble is made up of international musicians, whose ties have been intertwined since they studied music together, and on the way, other like-minded individuals have joined them. The camaraderie of the members of the orchestra enables their musical expression to be relaxed, which gives the performances an air of playfulness and homeliness.
+      </p>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
