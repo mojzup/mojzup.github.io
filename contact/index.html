@@ -4,23 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Tututu Orchestra</title>
- <link rel="icon" type="image/png" href="/images/sun.png">
-  <!-- Google Font - -->
- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+  <link rel="icon" type="image/png" href="/images/sun.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
   <style>
+    :root {
+      --gold: #d8a200;
+      --orange: #ce5426;
+      --teal: #019297;
+      --bg: #111;
+      --text-light: #eee;
+      --text-muted: #ccc;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
       scroll-behavior: smooth;
-     font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #fff;
     }
 
     header {
@@ -35,78 +42,75 @@
 
     nav {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 0 20px;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #fff;
+      color: var(--text-light);
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+      font-size: 1.05rem;
+      padding: 6px 10px;
+      letter-spacing: 0.5px;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #fcd34d;
+      color: var(--gold);
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     section {
-      max-width: 1000px;
-      margin: 100px auto 60px;
+      max-width: 700px;
+      margin: 140px auto 80px;
       padding: 0 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
-      color: #fcd34d;
+      color: var(--gold);
     }
 
     p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      margin-top: 40px;
       font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #ccc;
+      line-height: 2;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
+    .contact-links a {
+      color: var(--teal);
+      text-decoration: none;
     }
 
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 600px;
-      border: none;
-      border-radius: 4px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      padding: 10px 25px;
-      background-color: #fcd34d;
-      color: #111;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #e6b800;
+    .contact-links a:hover {
+      color: var(--gold);
     }
 
     footer {
@@ -116,36 +120,50 @@
       padding: 20px 0;
     }
 
-    a {
-      color: #fcd34d;
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Transparent Header with Centered Menu -->
+  <!-- Header with logo centered in nav -->
   <header>
     <nav>
-      <a href="/index.html">Home</a>
       <a href="/about/">About</a>
       <a href="/gallery/">Gallery</a>
+
+      <a href="/index.html" class="logo-link">
+        <img src="/images/logo.webp" alt="Tututu Logo" class="logo" />
+      </a>
+
+      <a href="/shows/">Shows</a>
       <a href="/contact/">Contact</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- Contact Content -->
   <section>
     <h1>Contact Us</h1>
-    <p>Have questions or feedback? Fill out the form below to get in touch.</p>
+    <p>For bookings, press inquiries, or just to say hi — get in touch!</p>
 
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-
-    <p style="margin-top: 20px; font-size: 0.9em;">* You can use a free service like <a href="https://formspree.io/" target="_blank">Formspree</a> to handle submissions.</p>
+    <div class="contact-links">
+      <p>📧 Email: <a href="mailto:tututu.orchestra@gmail.com">tututu.orchestra@gmail.com</a></p>
+      <p>📸 Instagram: <a href="https://instagram.com/tututu.orchestra" target="_blank">@tututu.orchestra</a></p>
+      <p>📘 Facebook: <a href="https://facebook.com/tututuorchestra" target="_blank">tututuorchestra</a></p>
+      <p>📎 EPK: <a href="https://example.com/epk.pdf" target="_blank">Download our EPK</a></p>
+    </div>
   </section>
 
   <!-- Footer -->
